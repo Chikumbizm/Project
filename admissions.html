@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Greenwood Academy</title>
+    <meta name="description" content="Apply to Greenwood Academy for 2026-2027. Learn about our admissions process and request information.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar solid" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <h1>Greenwood</h1>
+                    <span>Academy</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="admissions.html" class="nav-link active">Admissions</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary nav-btn">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image:url('images/students-brick-classroom.jpg');"></div>
+        <div class="page-header-content">
+            <span class="section-tag light">Admissions Open 2026-2027</span>
+            <h1>Begin Your Journey With Us</h1>
+            <p>We welcome students who are eager to learn, grow, and contribute to our vibrant school community.</p>
+            <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> <span>Begin Your Journey With Us</span></div>
+        </div>
+    </section>
+
+    <section class="admissions section-padding">
+        <div class="container">
+            <div class="admissions-wrapper">
+                <div class="admissions-content">
+                    <h2 style="color:#fff;">How to Apply</h2>
+                    <p>Our admissions process is designed to get to know each applicant personally, from first inquiry to your first day on campus.</p>
+
+                    <div class="admissions-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content"><h4>Inquire Online</h4><p>Fill out our inquiry form to receive information packet</p></div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content"><h4>Campus Visit</h4><p>Schedule a tour and experience our community firsthand</p></div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content"><h4>Submit Application</h4><p>Complete application with required documents</p></div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content"><h4>Assessment &amp; Interview</h4><p>Student assessment and family meeting</p></div>
+                        </div>
+                    </div>
+
+                    <div class="admissions-buttons">
+                        <a href="#admissionsForm" class="btn btn-light btn-lg">Apply Now</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Schedule Tour</a>
+                    </div>
+                </div>
+
+                <div class="admissions-form-card">
+                    <h3>Request Information</h3>
+                    <p class="form-subtitle">Fill out the form below and we'll send you our admissions packet.</p>
+                    <form class="admissions-form" id="admissionsForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="grade">Grade Applying For *</label>
+                                <select id="grade" name="grade" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="k">Kindergarten</option>
+                                    <option value="1-5">Elementary (1-5)</option>
+                                    <option value="6-8">Middle School (6-8)</option>
+                                    <option value="9-12">High School (9-12)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Academic Year</label>
+                                <select id="year" name="year">
+                                    <option value="2026-2027">2026-2027</option>
+                                    <option value="2027-2028">2027-2028</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Questions or Comments</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your child and any questions you have..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                        <p class="form-note">We respect your privacy. Your information will never be shared.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon light"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="logo-text light">
+                            <h1>Greenwood</h1>
+                            <span>Academy</span>
+                        </div>
+                    </div>
+                    <p>Nurturing curious minds and inspiring excellence since 1976. A trusted community where every student thrives.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Academic Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="faculty.html">Our Faculty</a></li>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="events.html">Events Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Parent Portal [Login]</a></li>
+                        <li><a href="#">Student Portal [Login]</a></li>
+                        <li><a href="faculty.html">Faculty &amp; Staff Directory</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Lunch Menu</a></li>
+                        <li><a href="#">Transportation Info</a></li>
+                        <li><a href="#">Handbook &amp; Policies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Greenwood Ave<br>Springfield, ST 12345</li>
+                        <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@greenwoodacademy.edu</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2026 Greenwood Academy. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success"><i class="fas fa-check-circle"></i></div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you within 2 business days.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Greenwood Academy</title>
+    <meta name="description" content="Read the latest news, achievements, and announcements from Greenwood Academy.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar solid" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <h1>Greenwood</h1>
+                    <span>Academy</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="news.html" class="nav-link active">News</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary nav-btn">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image:url('images/boy-writing-notebook.jpg');"></div>
+        <div class="page-header-content">
+            <span class="section-tag light">Latest News</span>
+            <h1>What's Happening at Greenwood</h1>
+            <p>Stay updated with the latest announcements, achievements, and school news.</p>
+            <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> <span>What's Happening at Greenwood</span></div>
+        </div>
+    </section>
+
+    <section class="news section-padding">
+        <div class="container">
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/classroom-wood-floor.jpg" alt="Science Olympiad win" class="img-fluid">
+                        <span class="news-category">Achievement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta"><span><i class="far fa-calendar"></i> August 15, 2026</span><span><i class="far fa-user"></i> Admin</span></div>
+                        <h3>Greenwood Team Wins Regional Science Olympiad</h3>
+                        <p>Our high school science team took first place at the Regional Science Olympiad, qualifying for the state championship next month.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/classroom-projector-map.jpg" alt="New library opening" class="img-fluid">
+                        <span class="news-category">Campus</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta"><span><i class="far fa-calendar"></i> August 10, 2026</span><span><i class="far fa-user"></i> Admin</span></div>
+                        <h3>New Library &amp; Media Center Grand Opening</h3>
+                        <p>We're thrilled to announce the opening of our state-of-the-art library featuring 50,000+ books and digital learning labs.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/students-working.jpg" alt="Community service milestone" class="img-fluid">
+                        <span class="news-category">Community</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta"><span><i class="far fa-calendar"></i> August 5, 2026</span><span><i class="far fa-user"></i> Admin</span></div>
+                        <h3>Students Complete 5,000 Hours of Community Service</h3>
+                        <p>Our students have reached a new milestone in community engagement, volunteering across 30+ local organizations this semester.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#" class="btn btn-outline">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon light"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="logo-text light">
+                            <h1>Greenwood</h1>
+                            <span>Academy</span>
+                        </div>
+                    </div>
+                    <p>Nurturing curious minds and inspiring excellence since 1976. A trusted community where every student thrives.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Academic Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="faculty.html">Our Faculty</a></li>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="events.html">Events Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Parent Portal [Login]</a></li>
+                        <li><a href="#">Student Portal [Login]</a></li>
+                        <li><a href="faculty.html">Faculty &amp; Staff Directory</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Lunch Menu</a></li>
+                        <li><a href="#">Transportation Info</a></li>
+                        <li><a href="#">Handbook &amp; Policies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Greenwood Ave<br>Springfield, ST 12345</li>
+                        <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@greenwoodacademy.edu</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2026 Greenwood Academy. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success"><i class="fas fa-check-circle"></i></div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you within 2 business days.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
