@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood Academy - Excellence in Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Greenwood</h1>
+                    <span>Academy</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#programs" class="nav-link">Programs</a></li>
+                    <li><a href="#admissions" class="nav-link">Admissions</a></li>
+                    <li><a href="#news" class="nav-link">News</a></li>
+                    <li><a href="#events" class="nav-link">Events</a></li>
+                    <li><a href="#faculty" class="nav-link">Faculty</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#admissions" class="btn btn-primary nav-btn">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero" id="home">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(26, 82, 58, 0.85) 0%, rgba(45, 120, 88, 0.8) 100%), url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20school%20campus%20building%20with%20green%20trees%20and%20students%20walking%2C%20sunny%20day&image_size=landscape_16_9') center/cover;"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Welcome to Greenwood Academy</span>
+                    <h2>Shaping Tomorrow's<br>Leaders Today</h2>
+                    <p>Providing excellence in education for over 50 years. We nurture curious minds and inspire lifelong learning in a supportive, innovative environment.</p>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="btn btn-primary btn-lg">Explore Programs</a>
+                        <a href="#about" class="btn btn-outline btn-lg">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide">
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(30, 60, 114, 0.85) 0%, rgba(65, 105, 180, 0.8) 100%), url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=students%20in%20modern%20classroom%20learning%20with%20technology%20tablets%20and%20laptops&image_size=landscape_16_9') center/cover;"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Innovation in Learning</span>
+                    <h2>Where Curiosity<br>Meets Opportunity</h2>
+                    <p>Our state-of-the-art facilities and dedicated faculty empower students to explore, discover, and achieve their fullest potential.</p>
+                    <div class="hero-buttons">
+                        <a href="#admissions" class="btn btn-primary btn-lg">Apply for Admission</a>
+                        <a href="#faculty" class="btn btn-outline btn-lg">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide">
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(139, 69, 19, 0.85) 0%, rgba(180, 120, 60, 0.8) 100%), url('https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=happy%20diverse%20group%20of%20students%20laughing%20together%20on%20school%20lawn%2C%20friendship&image_size=landscape_16_9') center/cover;"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">A Community of Learners</span>
+                    <h2>Inspiring Growth<br>& Friendship</h2>
+                    <p>Join a vibrant community where diversity is celebrated, and every student is valued for their unique talents and perspectives.</p>
+                    <div class="hero-buttons">
+                        <a href="#events" class="btn btn-primary btn-lg">View Events</a>
+                        <a href="#contact" class="btn btn-outline btn-lg">Visit Campus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="slider-btn prev" id="prevSlide" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="nextSlide" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="stat-number" data-target="2500">0</h3>
+                    <p class="stat-label">Active Students</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="stat-number" data-target="180">0</h3>
+                    <p class="stat-label">Expert Teachers</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-medal"></i></div>
+                    <h3 class="stat-number" data-target="98">0</h3>
+                    <p class="stat-label">% Graduation Rate</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2>A Legacy of Educational Excellence</h2>
+                <p class="section-subtitle">Discover what makes Greenwood Academy a trusted name in education</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-img-main">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=beautiful%20modern%20school%20building%20exterior%20with%20landscaped%20gardens&image_size=portrait_4_3" alt="School Campus" class="img-fluid">
+                    </div>
+                    <div class="about-img-accent">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=students%20collaborating%20on%20project%20in%20library%20with%20books&image_size=square" alt="Students" class="img-fluid">
+                    </div>
+                    <div class="about-badge">
+                        <h4>50+</h4>
+                        <p>Years of Service</p>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <h3>Our Mission</h3>
+                    <p>At Greenwood Academy, we are committed to providing a comprehensive education that develops the whole person — intellectually, socially, emotionally, and physically.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="feature-text">
+                                <h4>Innovative Curriculum</h4>
+                                <p>Forward-thinking programs that blend academics with real-world skills</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-text">
+                                <h4>Supportive Environment</h4>
+                                <p>A caring community where every student feels seen and valued</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                            <div class="feature-text">
+                                <h4>Global Perspective</h4>
+                                <p>Programs that prepare students for success in a connected world</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-star"></i></div>
+                            <div class="feature-text">
+                                <h4>Excellence in Action</h4>
+                                <p>Proven track record of academic and extracurricular achievements</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#admissions" class="btn btn-primary">Join Our Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs section-padding bg-gray" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Programs</span>
+                <h2>Pathways to Success</h2>
+                <p class="section-subtitle">Explore our diverse range of educational programs designed for every stage of learning</p>
+            </div>
+            
+            <div class="programs-tabs">
+                <button class="tab-btn active" data-tab="elementary">Elementary</button>
+                <button class="tab-btn" data-tab="middle">Middle School</button>
+                <button class="tab-btn" data-tab="high">High School</button>
+                <button class="tab-btn" data-tab="special">Special Programs</button>
+            </div>
+            
+            <div class="tab-content active" id="elementary">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a6f);">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Language Arts</h3>
+                        <p>Building strong reading, writing, and communication skills through engaging literature and interactive activities.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Phonics & Reading Comprehension</li>
+                            <li><i class="fas fa-check"></i> Creative Writing Workshops</li>
+                            <li><i class="fas fa-check"></i> Public Speaking</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #4ecdc4, #44a08d);">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathematics</h3>
+                        <p>Developing logical thinking and problem-solving abilities through hands-on math experiences.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Conceptual Understanding</li>
+                            <li><i class="fas fa-check"></i> Mental Math Strategies</li>
+                            <li><i class="fas fa-check"></i> Real-world Applications</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science Discovery</h3>
+                        <p>Exploring the wonders of science through experiments, observation, and discovery-based learning.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Hands-on Experiments</li>
+                            <li><i class="fas fa-check"></i> Nature Exploration</li>
+                            <li><i class="fas fa-check"></i> STEM Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="middle">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Advanced Sciences</h3>
+                        <p>Biology, Chemistry, and Physics courses with laboratory components for deeper understanding.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Full Laboratory Facilities</li>
+                            <li><i class="fas fa-check"></i> Science Olympiad Prep</li>
+                            <li><i class="fas fa-check"></i> Research Opportunities</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Technology & Coding</h3>
+                        <p>Introduction to computer science, programming fundamentals, and digital literacy.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Python & JavaScript Basics</li>
+                            <li><i class="fas fa-check"></i> Web Development</li>
+                            <li><i class="fas fa-check"></i> Robotics Club</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Social Studies</h3>
+                        <p>Understanding history, geography, civics, and cultures from around the world.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> World History</li>
+                            <li><i class="fas fa-check"></i> Geography & Culture</li>
+                            <li><i class="fas fa-check"></i> Model UN Program</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="high">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>College Prep</h3>
+                        <p>Comprehensive guidance for college applications, standardized tests, and academic planning.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> SAT/ACT Preparation</li>
+                            <li><i class="fas fa-check"></i> College Counseling</li>
+                            <li><i class="fas fa-check"></i> Essay Writing Support</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>AP & Honors</h3>
+                        <p>Advanced Placement courses across multiple disciplines for college-level challenge.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> 20+ AP Courses</li>
+                            <li><i class="fas fa-check"></i> Honors Track</li>
+                            <li><i class="fas fa-check"></i> Dual Enrollment</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Career & Technical</h3>
+                        <p>Practical skills training for career readiness and vocational exploration.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Business & Entrepreneurship</li>
+                            <li><i class="fas fa-check"></i> Health Sciences</li>
+                            <li><i class="fas fa-check"></i> Engineering Pathways</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="special">
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #d299c2, #fef9d7);">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Fine Arts</h3>
+                        <p>Visual arts, music, theater, and dance programs to nurture creative expression.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Studio Art & Design</li>
+                            <li><i class="fas fa-check"></i> Band & Choir</li>
+                            <li><i class="fas fa-check"></i> Drama Productions</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #89f7fe, #66a6ff);">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Athletics</h3>
+                        <p>Competitive sports programs and fitness education for physical development.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> 15+ Varsity Sports</li>
+                            <li><i class="fas fa-check"></i> Fitness & Wellness</li>
+                            <li><i class="fas fa-check"></i> Intramural Leagues</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <div class="program-icon" style="background: linear-gradient(135deg, #fddb92, #d1fdff);">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>World Languages</h3>
+                        <p>Developing fluency and cultural understanding through immersive language study.</p>
+                        <ul class="program-features">
+                            <li><i class="fas fa-check"></i> Spanish, French, Mandarin</li>
+                            <li><i class="fas fa-check"></i> Cultural Exchange Programs</li>
+                            <li><i class="fas fa-check"></i> Language Immersion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section class="admissions section-padding" id="admissions">
+        <div class="container">
+            <div class="admissions-wrapper">
+                <div class="admissions-content">
+                    <span class="section-tag light">Admissions Open 2026-2027</span>
+                    <h2>Begin Your Journey<br>With Us</h2>
+                    <p>We welcome students who are eager to learn, grow, and contribute to our vibrant school community. Our admissions process is designed to get to know each applicant personally.</p>
+                    
+                    <div class="admissions-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Inquire Online</h4>
+                                <p>Fill out our inquiry form to receive information packet</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Campus Visit</h4>
+                                <p>Schedule a tour and experience our community firsthand</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Submit Application</h4>
+                                <p>Complete application with required documents</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Assessment & Interview</h4>
+                                <p>Student assessment and family meeting</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admissions-buttons">
+                        <a href="#" class="btn btn-light btn-lg">Apply Now</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Schedule Tour</a>
+                    </div>
+                </div>
+                
+                <div class="admissions-form-card">
+                    <h3>Request Information</h3>
+                    <p class="form-subtitle">Fill out the form below and we'll send you our admissions packet.</p>
+                    <form class="admissions-form" id="admissionsForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="grade">Grade Applying For *</label>
+                                <select id="grade" name="grade" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="k">Kindergarten</option>
+                                    <option value="1-5">Elementary (1-5)</option>
+                                    <option value="6-8">Middle School (6-8)</option>
+                                    <option value="9-12">High School (9-12)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Academic Year</label>
+                                <select id="year" name="year">
+                                    <option value="2026-2027">2026-2027</option>
+                                    <option value="2027-2028">2027-2028</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Questions or Comments</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your child and any questions you have..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
+                        <p class="form-note">We respect your privacy. Your information will never be shared.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news section-padding bg-gray" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Latest News</span>
+                <h2>What's Happening at Greenwood</h2>
+                <p class="section-subtitle">Stay updated with the latest announcements, achievements, and school news</p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=students%20winning%20science%20fair%20competition%20with%20trophy%2C%20celebration&image_size=landscape_16_9" alt="News" class="img-fluid">
+                        <span class="news-category">Achievement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> August 15, 2026</span>
+                            <span><i class="far fa-user"></i> Admin</span>
+                        </div>
+                        <h3>Greenwood Team Wins Regional Science Olympiad</h3>
+                        <p>Our high school science team took first place at the Regional Science Olympiad, qualifying for the state championship next month.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=new%20modern%20library%20interior%20with%20bookshelves%20and%20students%20reading&image_size=landscape_16_9" alt="News" class="img-fluid">
+                        <span class="news-category">Campus</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> August 10, 2026</span>
+                            <span><i class="far fa-user"></i> Admin</span>
+                        </div>
+                        <h3>New Library & Media Center Grand Opening</h3>
+                        <p>We're thrilled to announce the opening of our state-of-the-art library featuring 50,000+ books and digital learning labs.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=students%20planting%20trees%20in%20community%20garden%20volunteer%20activity&image_size=landscape_16_9" alt="News" class="img-fluid">
+                        <span class="news-category">Community</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> August 5, 2026</span>
+                            <span><i class="far fa-user"></i> Admin</span>
+                        </div>
+                        <h3>Students Complete 5,000 Hours of Community Service</h3>
+                        <p>Our students have reached a new milestone in community engagement, volunteering across 30+ local organizations this semester.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#" class="btn btn-outline">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events section-padding" id="events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Upcoming Events</span>
+                <h2>Mark Your Calendars</h2>
+                <p class="section-subtitle">Join us for exciting events, activities, and opportunities throughout the year</p>
+            </div>
+            
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">25</div>
+                        <div class="event-month">AUG</div>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-category">Parent Engagement</span>
+                        <h3>Back-to-School Night</h3>
+                        <p>Meet your child's teachers, tour classrooms, and learn about our curriculum and upcoming programs for the school year.</p>
+                        <div class="event-meta">
+                            <span><i class="far fa-clock"></i> 6:00 PM - 8:30 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Main Campus Auditorium</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                </div>
+                
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">02</div>
+                        <div class="event-month">SEP</div>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-category">Athletics</span>
+                        <h3>Homecoming Football Game & Parade</h3>
+                        <p>Celebrate Greenwood pride! Join us for the traditional parade followed by our varsity football homecoming game under the lights.</p>
+                        <div class="event-meta">
+                            <span><i class="far fa-clock"></i> 3:00 PM Parade / 7:00 PM Game</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Greenwood Stadium</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                </div>
+                
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">12</div>
+                        <div class="event-month">SEP</div>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-category">Arts</span>
+                        <h3>Fall Arts Festival</h3>
+                        <p>Experience creativity in full display! Featuring student art exhibitions, band performances, and drama club showcase.</p>
+                        <div class="event-meta">
+                            <span><i class="far fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Arts Center & Quad</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                </div>
+                
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-day">20</div>
+                        <div class="event-month">SEP</div>
+                    </div>
+                    <div class="event-details">
+                        <span class="event-category">Community</span>
+                        <h3>Greenwood 5K Fun Run & Health Fair</h3>
+                        <p>Family-friendly event featuring a 5K run/walk followed by a health and wellness fair with local vendors and activities.</p>
+                        <div class="event-meta">
+                            <span><i class="far fa-clock"></i> 8:00 AM - 1:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Campus Athletic Fields</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#" class="btn btn-outline">View Full Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty section-padding bg-gray" id="faculty">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Faculty</span>
+                <h2>Meet Our Dedicated Teachers</h2>
+                <p class="section-subtitle">Passionate educators committed to inspiring and supporting every student's journey</p>
+            </div>
+            
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20female%20school%20principal%20portrait%2C%20warm%20smile%2C%20business%20casual&image_size=square_hd" alt="Principal" class="img-fluid">
+                        <div class="faculty-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Margaret Thompson</h3>
+                        <span class="faculty-role">Head of School</span>
+                        <p>Ph.D. in Educational Leadership, 25+ years in education. Passionate about student-centered learning.</p>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=male%20high%20school%20science%20teacher%20portrait%2C%20friendly%20smile%2C%20lab%20coat&image_size=square_hd" alt="Teacher" class="img-fluid">
+                        <div class="faculty-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mr. Robert Chen</h3>
+                        <span class="faculty-role">Science Department Chair</span>
+                        <p>M.S. in Physics. Leads our STEM programs and coaches the award-winning Science Olympiad team.</p>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20female%20english%20teacher%20portrait%2C%20warm%20and%20approachable%2C%20holding%20book&image_size=square_hd" alt="Teacher" class="img-fluid">
+                        <div class="faculty-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Ms. Emily Rodriguez</h3>
+                        <span class="faculty-role">English Department Chair</span>
+                        <p>M.A. in Literature. Published author who inspires students through creative writing and literature workshops.</p>
+                    </div>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=middle%20aged%20female%20art%20teacher%20portrait%2C%20colorful%20creative%20style%2C%20warm%20smile&image_size=square_hd" alt="Teacher" class="img-fluid">
+                        <div class="faculty-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Mrs. Sarah Johnson</h3>
+                        <span class="faculty-role">Fine Arts Director</span>
+                        <p>M.F.A. in Studio Art. Exhibiting artist who directs our visual arts program and annual gallery shows.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#" class="btn btn-outline">View All Faculty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Community Says</h2>
+                <p class="section-subtitle">Hear from parents, students, and alumni about their Greenwood experience</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Greenwood Academy exceeded all our expectations. The teachers genuinely care about each child, and we've seen our daughter flourish both academically and socially. The supportive community is unmatched."</p>
+                    <div class="testimonial-author">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20parent%20portrait%20mother%2C%20warm%20smile%2C%20casual&image_size=square" alt="Parent" class="testimonial-avatar">
+                        <div>
+                            <h4>Jennifer Martinez</h4>
+                            <span>Parent of 5th & 8th Grader</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"As a senior, I can honestly say Greenwood has shaped who I am today. The AP programs, college counseling, and extracurricular opportunities gave me the confidence and skills to pursue my dreams at university."</p>
+                    <div class="testimonial-author">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=high%20school%20senior%20student%20portrait%2C%20confident%20smile%2C%20graduation%20cap&image_size=square" alt="Student" class="testimonial-avatar">
+                        <div>
+                            <h4>Michael Park</h4>
+                            <span>Class of 2026 Valedictorian</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Graduating from Greenwood was the best foundation I could have asked for. The critical thinking skills and leadership experiences I gained here directly prepared me for success in my engineering career and beyond."</p>
+                    <div class="testimonial-author">
+                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=young%20professional%20alumni%20portrait%2C%20confident%2C%20business%20casual&image_size=square" alt="Alumni" class="testimonial-avatar">
+                        <div>
+                            <h4>Dr. Amanda Williams</h4>
+                            <span>Class of 2010, NASA Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="testi-dot active" data-testi="0"></span>
+                <span class="testi-dot" data-testi="1"></span>
+                <span class="testi-dot" data-testi="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join the Greenwood Family?</h2>
+                <p>Take the first step toward an exceptional education. Schedule a campus tour today and experience our community in person.</p>
+                <div class="cta-buttons">
+                    <a href="#admissions" class="btn btn-light btn-lg">Apply Now</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Schedule a Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section-padding bg-gray" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2>We'd Love to Hear From You</h2>
+                <p class="section-subtitle">Have questions? Reach out to our team — we're here to help</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Campus Address</h4>
+                            <p>1234 Greenwood Avenue<br>Springfield, ST 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>Main Office: (555) 123-4567<br>Admissions: (555) 123-4568</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@greenwoodacademy.edu<br>admissions@greenwoodacademy.edu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="far fa-clock"></i></div>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Mon - Fri: 7:30 AM - 4:30 PM<br>Sat - Sun: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cName">Your Name *</label>
+                                <input type="text" id="cName" name="cName" required placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="cEmail">Email *</label>
+                                <input type="email" id="cEmail" name="cEmail" required placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cSubject">Subject</label>
+                                <select id="cSubject" name="cSubject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="admissions">Admissions Question</option>
+                                    <option value="tour">Schedule a Tour</option>
+                                    <option value="employment">Employment</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cPhone">Phone</label>
+                                <input type="tel" id="cPhone" name="cPhone" placeholder="(555) 000-0000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cMessage">Message *</label>
+                            <textarea id="cMessage" name="cMessage" rows="6" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section Placeholder -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Interactive Campus Map</h3>
+            <p>[Google Maps embed will be displayed here]</p>
+            <p class="map-hint">1234 Greenwood Avenue, Springfield, ST 12345</p>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon light">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text light">
+                            <h1>Greenwood</h1>
+                            <span>Academy</span>
+                        </div>
+                    </div>
+                    <p>Nurturing curious minds and inspiring excellence since 1976. A trusted community where every student thrives.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Academic Programs</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                        <li><a href="#faculty">Our Faculty</a></li>
+                        <li><a href="#news">Latest News</a></li>
+                        <li><a href="#events">Events Calendar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Parent Portal [Login]</a></li>
+                        <li><a href="#">Student Portal [Login]</a></li>
+                        <li><a href="#">Faculty & Staff Directory</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="#">Lunch Menu</a></li>
+                        <li><a href="#">Transportation Info</a></li>
+                        <li><a href="#">Handbook & Policies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Greenwood Ave<br>Springfield, ST 12345</li>
+                        <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@greenwoodacademy.edu</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2026 Greenwood Academy. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal Placeholder -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success"><i class="fas fa-check-circle"></i></div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you within 2 business days.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
