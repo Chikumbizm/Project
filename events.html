@@ -57,8 +57,19 @@
 
     <section class="events section-padding">
         <div class="container">
+            <!-- Category Filter -->
+            <div class="events-filter" style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 16px; font-size: 1.1rem;">Filter by Category:</h3>
+                <div class="filter-buttons" style="display: flex; gap: 12px; flex-wrap: wrap;">
+                    <button class="filter-btn active" data-filter="all" style="padding: 10px 20px; border-radius: 999px; background: var(--green-800); color: #fff; border: 2px solid var(--green-800); cursor: pointer; font-weight: 600; transition: all 0.25s ease;">All Events</button>
+                    <button class="filter-btn" data-filter="Athletics" style="padding: 10px 20px; border-radius: 999px; background: transparent; color: var(--green-800); border: 2px solid var(--green-800); cursor: pointer; font-weight: 600; transition: all 0.25s ease;">⚽ Athletics</button>
+                    <button class="filter-btn" data-filter="Arts" style="padding: 10px 20px; border-radius: 999px; background: transparent; color: var(--green-800); border: 2px solid var(--green-800); cursor: pointer; font-weight: 600; transition: all 0.25s ease;">🎭 Arts</button>
+                    <button class="filter-btn" data-filter="Academics" style="padding: 10px 20px; border-radius: 999px; background: transparent; color: var(--green-800); border: 2px solid var(--green-800); cursor: pointer; font-weight: 600; transition: all 0.25s ease;">📚 Academics</button>
+                </div>
+            </div>
+
             <div class="events-list">
-                <div class="event-item">
+                <div class="event-item" data-category="Parent Engagement">
                     <div class="event-date"><div class="event-day">25</div><div class="event-month">AUG</div></div>
                     <div class="event-details">
                         <span class="event-category">Parent Engagement</span>
@@ -66,10 +77,13 @@
                         <p>Meet your child's teachers, tour classrooms, and learn about our curriculum and upcoming programs for the school year.</p>
                         <div class="event-meta"><span><i class="far fa-clock"></i> 6:00 PM - 8:30 PM</span><span><i class="fas fa-map-marker-alt"></i> Main Campus Auditorium</span></div>
                     </div>
-                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Back-to-School Night" data-date="2026-08-25" data-time="18:00" data-end-time="20:30" data-location="Main Campus Auditorium" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
                 </div>
 
-                <div class="event-item">
+                <div class="event-item" data-category="Athletics">
                     <div class="event-date"><div class="event-day">02</div><div class="event-month">SEP</div></div>
                     <div class="event-details">
                         <span class="event-category">Athletics</span>
@@ -77,10 +91,13 @@
                         <p>Celebrate Greenwood pride! Join us for the traditional parade followed by our varsity football homecoming game under the lights.</p>
                         <div class="event-meta"><span><i class="far fa-clock"></i> 3:00 PM Parade / 7:00 PM Game</span><span><i class="fas fa-map-marker-alt"></i> Greenwood Stadium</span></div>
                     </div>
-                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Homecoming Football Game & Parade" data-date="2026-09-02" data-time="15:00" data-end-time="21:00" data-location="Greenwood Stadium" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
                 </div>
 
-                <div class="event-item">
+                <div class="event-item" data-category="Arts">
                     <div class="event-date"><div class="event-day">12</div><div class="event-month">SEP</div></div>
                     <div class="event-details">
                         <span class="event-category">Arts</span>
@@ -88,10 +105,13 @@
                         <p>Experience creativity in full display! Featuring student art exhibitions, band performances, and drama club showcase.</p>
                         <div class="event-meta"><span><i class="far fa-clock"></i> 9:00 AM - 5:00 PM</span><span><i class="fas fa-map-marker-alt"></i> Arts Center &amp; Quad</span></div>
                     </div>
-                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Fall Arts Festival" data-date="2026-09-12" data-time="09:00" data-end-time="17:00" data-location="Arts Center & Quad" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
                 </div>
 
-                <div class="event-item">
+                <div class="event-item" data-category="Community">
                     <div class="event-date"><div class="event-day">20</div><div class="event-month">SEP</div></div>
                     <div class="event-details">
                         <span class="event-category">Community</span>
@@ -99,7 +119,222 @@
                         <p>Family-friendly event featuring a 5K run/walk followed by a health and wellness fair with local vendors and activities.</p>
                         <div class="event-meta"><span><i class="far fa-clock"></i> 8:00 AM - 1:00 PM</span><span><i class="fas fa-map-marker-alt"></i> Campus Athletic Fields</span></div>
                     </div>
-                    <a href="#" class="btn btn-primary event-btn">Details</a>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Greenwood 5K Fun Run & Health Fair" data-date="2026-09-20" data-time="08:00" data-end-time="13:00" data-location="Campus Athletic Fields" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Zambian Academic Calendar Important Dates -->
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">01</div><div class="event-month">JAN</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>New Year's Day</h3>
+                        <p>Public holiday - School Closed</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> All Day</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="New Year's Day - School Closed" data-date="2026-01-01" data-time="00:00" data-end-time="23:59" data-location="School Closed" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">12</div><div class="event-month">MAR</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>Youth Day</h3>
+                        <p>Public holiday celebrating Zambian youth - School Closed</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> All Day</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Youth Day - School Closed" data-date="2026-03-12" data-time="00:00" data-end-time="23:59" data-location="School Closed" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">25</div><div class="event-month">MAY</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>Africa Freedom Day</h3>
+                        <p>Public holiday - School Closed</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> All Day</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Africa Freedom Day - School Closed" data-date="2026-05-25" data-time="00:00" data-end-time="23:59" data-location="School Closed" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">04</div><div class="event-month">JUL</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>Independence Day</h3>
+                        <p>Public holiday celebrating Zambian independence - School Closed</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> All Day</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Independence Day - School Closed" data-date="2026-07-04" data-time="00:00" data-end-time="23:59" data-location="School Closed" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">25</div><div class="event-month">OCT</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>Teachers' Day</h3>
+                        <p>Holiday celebrating Zambian teachers - Early dismissal at 2:00 PM</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> Early Dismissal</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Teachers' Day - Early Dismissal" data-date="2026-10-25" data-time="14:00" data-end-time="14:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid var(--gold-500);">
+                    <div class="event-date" style="background: var(--gold-500);"><div class="event-day">25</div><div class="event-month">DEC</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: var(--gold-600);">🇿🇲 Zambian Holiday</span>
+                        <h3>Christmas Day</h3>
+                        <p>Public holiday - School Closed</p>
+                        <div class="event-meta"><span><i class="fas fa-ban"></i> All Day</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Christmas Day - School Closed" data-date="2026-12-25" data-time="00:00" data-end-time="23:59" data-location="School Closed" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Zambian Academic School Calendar Key Dates -->
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">02</div><div class="event-month">JAN</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 1 Begins (Primary School)</h3>
+                        <p>First term of Zambian academic year for primary school students</p>
+                        <div class="event-meta"><span><i class="far fa-calendar"></i> Classes Resume</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 1 Begins - Primary School" data-date="2026-01-02" data-time="08:00" data-end-time="16:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">10</div><div class="event-month">APR</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 1 Ends - School Break</h3>
+                        <p>End of first term - Easter holidays and school break begins</p>
+                        <div class="event-meta"><span><i class="fas fa-bed"></i> 2-Week Break</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 1 Ends - School Break" data-date="2026-04-10" data-time="15:00" data-end-time="15:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">24</div><div class="event-month">APR</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 2 Begins</h3>
+                        <p>Second term of the academic year - Classes resume after Easter break</p>
+                        <div class="event-meta"><span><i class="far fa-calendar"></i> Classes Resume</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 2 Begins" data-date="2026-04-24" data-time="08:00" data-end-time="16:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">26</div><div class="event-month">JUN</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 2 Ends - Mid-Year Break</h3>
+                        <p>End of second term - Mid-year school holidays (winter break in Southern Hemisphere)</p>
+                        <div class="event-meta"><span><i class="fas fa-bed"></i> 4-Week Break</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 2 Ends - Mid-Year Break" data-date="2026-06-26" data-time="15:00" data-end-time="15:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">20</div><div class="event-month">JUL</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 3 Begins</h3>
+                        <p>Third term of the academic year - Classes resume after mid-year holidays</p>
+                        <div class="event-meta"><span><i class="far fa-calendar"></i> Classes Resume</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 3 Begins" data-date="2026-07-20" data-time="08:00" data-end-time="16:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">11</div><div class="event-month">SEP</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 3 Ends - Spring Break</h3>
+                        <p>End of third term - Spring holidays begin</p>
+                        <div class="event-meta"><span><i class="fas fa-bed"></i> 2-Week Break</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 3 Ends - Spring Break" data-date="2026-09-11" data-time="15:00" data-end-time="15:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">25</div><div class="event-month">SEP</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Term 4 Begins</h3>
+                        <p>Final term of the academic year - Classes resume after spring break</p>
+                        <div class="event-meta"><span><i class="far fa-calendar"></i> Classes Resume</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Term 4 Begins" data-date="2026-09-25" data-time="08:00" data-end-time="16:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">04</div><div class="event-month">DEC</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>Year-End Examinations Begin</h3>
+                        <p>Final examinations for all primary school students</p>
+                        <div class="event-meta"><span><i class="fas fa-pencil-alt"></i> 2-Week Exam Period</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="Year-End Examinations Begin" data-date="2026-12-04" data-time="08:00" data-end-time="16:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="event-item" data-category="Academics" style="border-left: 4px solid #4CAF50;">
+                    <div class="event-date" style="background: #4CAF50;"><div class="event-day">18</div><div class="event-month">DEC</div></div>
+                    <div class="event-details">
+                        <span class="event-category" style="color: #4CAF50;">📚 Academic Calendar</span>
+                        <h3>School Year Ends</h3>
+                        <p>End of academic year - Summer/December holidays begin</p>
+                        <div class="event-meta"><span><i class="fas fa-bed"></i> Long Holiday Break</span></div>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-shrink: 0;">
+                        <a href="#" class="btn btn-primary event-btn">Details</a>
+                        <button class="btn btn-outline add-to-cal-btn" data-title="School Year Ends - Holiday Break" data-date="2026-12-18" data-time="15:00" data-end-time="15:00" data-location="School" style="font-size: 0.85rem; padding: 13px 18px;"><i class="fas fa-calendar-plus"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 3rem;">
