@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
 
     /* ---------- Back to Top Button ---------- */
     if (backToTop) {
@@ -105,7 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSlide(index) {
         if (index >= heroSlides.length) { currentSlide = 0; }
-        if (index < 0) { currentSlide = heroSlides.length - 1; }
+        else if (index < 0) { currentSlide = heroSlides.length - 1; }
+        else { currentSlide = index; }
 
         heroSlides.forEach(function (slide, i) {
             slide.classList.toggle('active', i === currentSlide);
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 6000);
+        slideInterval = setInterval(nextSlide, 7000);
     }
 
     function stopSlideShow() {
