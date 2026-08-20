@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Greenwood Academy</title>
     <meta name="description" content="Greenwood Academy — Excellence in education for over 50 years.">
+    <link rel="canonical" href="https://www.greenwoodacademy.edu/">
+    <meta name="theme-color" content="#123526">
+
+    <!-- Favicon: replace these files with your actual icons in /images -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Greenwood Academy — Excellence in Education">
+    <meta property="og:description" content="Greenwood Academy — Excellence in education for over 50 years.">
+    <meta property="og:image" content="https://www.greenwoodacademy.edu/images/school-building.jpg">
+    <meta property="og:url" content="https://www.greenwoodacademy.edu/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Greenwood Academy — Excellence in Education">
+    <meta name="twitter:description" content="Greenwood Academy — Excellence in education for over 50 years.">
+    <meta name="twitter:image" content="https://www.greenwoodacademy.edu/images/school-building.jpg">
+
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Temporary inline styles until moved into styles.css */
+        .skip-link{position:absolute;left:-9999px;top:0;background:#123526;color:#fff;padding:12px 20px;z-index:9999;text-decoration:none;font-weight:600;}
+        .skip-link:focus{left:10px;top:10px;}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+        .logo-text .logo-title{margin:0;font:inherit;font-weight:700;}
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -13,12 +39,14 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header class="navbar solid" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
                 <div class="logo-text">
-                    <h1>Greenwood</h1>
+                    <p class="logo-title">Greenwood</p>
                     <span>Academy</span>
                 </div>
             </a>
@@ -29,8 +57,7 @@
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="programs.html" class="nav-link">Programs</a></li>
                     <li><a href="admissions.html" class="nav-link">Admissions</a></li>
-                    <li><a href="news.html" class="nav-link">News</a></li>
-                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="news.html" class="nav-link">News &amp; Events</a></li>
                     <li><a href="faculty.html" class="nav-link">Faculty</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -45,10 +72,12 @@
         </div>
     </header>
 
+    <main id="main-content">
+    <h1 class="sr-only">Greenwood Academy — Excellence in Education Since 1976</h1>
     <section class="hero" id="home">
         <div class="hero-slider" id="heroSlider">
             <div class="hero-slide active">
-                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(45,120,88,0.75) 100%), url('images/placeholder-school-building.jpg') center/cover;"></div>
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(45,120,88,0.75) 100%), url('images/school-building.jpg') center/cover;"></div>
                 <div class="hero-container">
                 <div class="hero-content">
                     <span class="hero-tag">Welcome to Greenwood Academy</span>
@@ -63,7 +92,7 @@
             </div>
 
             <div class="hero-slide">
-                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(30,60,114,0.85) 0%, rgba(65,105,180,0.75) 100%), url('images/placeholder-classroom-teaching.jpg') center/cover;"></div>
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(45,120,88,0.75) 100%), url('images/student\ painting.jpg') center/cover;"></div>
                 <div class="hero-container">
                 <div class="hero-content">
                     <span class="hero-tag">Innovation in Learning</span>
@@ -78,7 +107,7 @@
             </div>
 
             <div class="hero-slide">
-                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(180,120,60,0.7) 100%), url('images/placeholder-students-working.jpg') center/cover;"></div>
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(180,120,60,0.7) 100%), url('images/students-working.jpg') center/cover;"></div>
                 <div class="hero-container">
                 <div class="hero-content">
                     <span class="hero-tag">A Community of Learners</span>
@@ -87,6 +116,35 @@
                     <div class="hero-buttons">
                         <a href="events.html" class="btn btn-primary btn-lg">View Events</a>
                         <a href="contact.html" class="btn btn-outline-light btn-lg">Visit Campus</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(45,120,88,0.75) 100%), url('images/computer lab.jpg') center/cover;"></div>
+                <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag">State-of-the-Art Facilities</span>
+                    <h2>Technology That<br>Powers Learning</h2>
+                    <p>Our fully equipped computer lab gives students hands-on experience with coding, digital design, and the technology skills they'll need for the future.</p>
+                    <div class="hero-buttons">
+                        <a href="programs.html" class="btn btn-primary btn-lg">Explore STEM Programs</a>
+                        <a href="about.html" class="btn btn-outline-light btn-lg">Tour Our Campus</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="hero-slide">
+                <div class="hero-bg" style="background: linear-gradient(135deg, rgba(18,53,38,0.85) 0%, rgba(45,120,88,0.75) 100%), url('images/science lab.jpg') center/cover;"></div>
+                <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag">Hands-On Discovery</span>
+                    <h2>Science Comes<br>Alive Here</h2>
+                    <p>From chemistry to biology, our modern science labs let students test, experiment, and discover — turning classroom theory into real-world understanding.</p>
+                    <div class="hero-buttons">
+                        <a href="programs.html" class="btn btn-primary btn-lg">Explore Programs</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">Schedule a Visit</a>
                     </div>
                 </div>
                 </div>
@@ -102,6 +160,8 @@
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
         </div>
     </section>
 
@@ -190,6 +250,39 @@
         </div>
     </section>
 
+    <section class="news-preview section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Stay Connected</span>
+                <h2>Latest News &amp; Upcoming Events</h2>
+                <p class="section-subtitle">Keep up with what's happening around campus</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);"><i class="fas fa-newspaper"></i></div>
+                    <h3>Placeholder: News Headline</h3>
+                    <p>Placeholder — Replace with a short summary of your most recent school news item.</p>
+                    <a href="news.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #4ecdc4, #44a08d);"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Placeholder: Upcoming Event</h3>
+                    <p>Placeholder — Replace with the date and details of your next open house, fair, or performance.</p>
+                    <a href="events.html" class="read-more">View Event <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Placeholder: Announcement</h3>
+                    <p>Placeholder — Replace with a school announcement, achievement, or press mention.</p>
+                    <a href="news.html" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="section-footer-link" style="text-align:center;margin-top:2rem;">
+                <a href="news.html" class="btn btn-primary">View All News &amp; Events</a>
+            </div>
+        </div>
+    </section>
+
     <section class="testimonials section-padding">
         <div class="container">
             <div class="section-header">
@@ -243,6 +336,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -251,7 +345,7 @@
                     <div class="footer-logo">
                         <div class="logo-icon light"><i class="fas fa-graduation-cap"></i></div>
                         <div class="logo-text light">
-                            <h1>Greenwood</h1>
+                            <p class="logo-title">Greenwood</p>
                             <span>Academy</span>
                         </div>
                     </div>
