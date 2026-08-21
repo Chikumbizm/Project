@@ -410,4 +410,141 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    /* ---------- Events Category Filtering ---------- */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const eventItems = document.querySelectorAll('.event-item');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const selectedFilter = btn.getAttribute('data-filter');
+
+                filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                btn.style.background = selectedFilter === 'all' ? 'var(--green-800)' : 'var(--green-800)';
+                btn.style.color = '#fff';
+
+                eventItems.forEach(function (item) {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (selectedFilter === 'all' || itemCategory === selectedFilter) {
+                        item.style.display = 'flex';
+                        setTimeout(function () {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(function () {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    /* ---------- Add to Calendar Functionality ---------- */
+    const addToCalBtns = document.querySelectorAll('.add-to-cal-btn');
+
+    if (addToCalBtns.length > 0) {
+        addToCalBtns.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const title = btn.getAttribute('data-title');
+                const date = btn.getAttribute('data-date');
+                const time = btn.getAttribute('data-time');
+                const endTime = btn.getAttribute('data-end-time');
+                const location = btn.getAttribute('data-location');
+
+                showCalendarOptions(title, date, time, endTime, location);
+            });
+        });
+    }
+
+    function showCalendarOptions(title, date, time, endTime, location) {
+        const modal = document.createElement('div');
+        modal.style.cssText = 'position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; display: flex; align-items: center; justify-content: center;';
+        
+        const content = document.createElement('div');
+        content.style.cssText = 'background: #fff; border-radius: 14px; padding: 32px; max-width: 400px; text-align: center; box-shadow: 0 24px 60px rgba(18,53,38,0.18);';
+        
+        content.innerHTML = `
+            <h3 style="margin-bottom: 16px; color: var(--green-900); font-size: 1.3rem;">Add to Calendar</h3>
+            <p style="color: var(--ink-500); margin-bottom: 24px;">Choose your preferred calendar service:</p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <button class="btn btn-primary btn-block" id="googleCalBtn" style="justify-content: center; margin-bottom: 0;">
+                    <i class="fab fa-google"></i> Google Calendar
+                </button>
+                <button class="btn btn-outline btn-block" id="icalBtn" style="justify-content: center; margin-bottom: 0; color: var(--green-800);">
+                    <i class="far fa-calendar"></i> Apple iCal
+                </button>
+                <button class="btn btn-outline btn-block" onclick="this.parentElement.parentElement.parentElement.remove();" style="justify-content: center; margin-bottom: 0; color: var(--green-800);">
+                    Cancel
+                </button>
+            </div>
+        `;
+
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+
+        document.getElementById('googleCalBtn').addEventListener('click', function () {
+            addToGoogleCalendar(title, date, time, endTime, location);
+            modal.remove();
+        });
+
+        document.getElementById('icalBtn').addEventListener('click', function () {
+            addToICalendar(title, date, time, endTime, location);
+            modal.remove();
+        });
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) modal.remove();
+        });
+    }
+
+    function addToGoogleCalendar(title, date, time, endTime, location) {
+        const startDateTime = date + 'T' + time + ':00';
+        const endDateTime = date + 'T' + endTime + ':00';
+        
+        const googleCalendarUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' +
+            encodeURIComponent(title) +
+            '&dates=' + startDateTime.replace(/[-:]/g, '').replace('T', '') + 'Z/' +
+            endDateTime.replace(/[-:]/g, '').replace('T', '') + 'Z' +
+            '&location=' + encodeURIComponent(location) +
+            '&details=Event%20from%20Greenwood%20Academy';
+
+        window.open(googleCalendarUrl, '_blank');
+    }
+
+    function addToICalendar(title, date, time, endTime, location) {
+        const startDateTime = date + 'T' + time + ':00Z';
+        const endDateTime = date + 'T' + endTime + ':00Z';
+
+        const icalContent = 'BEGIN:VCALENDAR\n' +
+            'VERSION:2.0\n' +
+            'PRODID:-//Greenwood Academy//Events//EN\n' +
+            'BEGIN:VEVENT\n' +
+            'UID:' + Math.random().toString(36).substr(2, 9) + '@greenwoodacademy.edu\n' +
+            'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z\n' +
+            'DTSTART:' + startDateTime.replace(/[-:]/g, '').split('.')[0] + 'Z\n' +
+            'DTEND:' + endDateTime.replace(/[-:]/g, '').split('.')[0] + 'Z\n' +
+            'SUMMARY:' + title + '\n' +
+            'LOCATION:' + location + '\n' +
+            'DESCRIPTION:Event from Greenwood Academy\n' +
+            'END:VEVENT\n' +
+            'END:VCALENDAR';
+
+        const blob = new Blob([icalContent], { type: 'text/calendar' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = title.replace(/\s+/g, '_') + '.ics';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
 });
