@@ -56,13 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: d(2, 12), name: "Youth Day" },
         { date: goodFriday, name: "Good Friday" },
         { date: easterMonday, name: "Easter Monday" },
-        { date: d(3, 28), name: "Kenneth Kaunda's Birthday" },
+        { date: d(3, 28), name: "Kenneth Kaunda Day" },
         { date: d(4, 1), name: "Labour Day" },
-        { date: d(4, 25), name: "African Freedom Day" },
+        { date: d(4, 25), name: "Africa Freedom Day" },
         { date: heroesDay, name: "Heroes' Day" },
         { date: unityDay, name: "Unity Day" },
         { date: farmersDay, name: "Farmers' Day" },
-        { date: d(9, 18), name: "National Day of Prayer" },
         { date: d(9, 24), name: "Independence Day" },
         { date: d(11, 25), name: "Christmas Day" }
     ];
@@ -73,59 +72,59 @@ document.addEventListener('DOMContentLoaded', function () {
     const TERMS = [
         {
             id: 'term1', label: 'Term 1', cls: 'term1', color: 'var(--term1)',
-            opening: d(0, 12), closing: d(3, 2),
+            opening: d(0, 12), closing: d(3, 6),
             weeks: [
-                { n: 1, start: d(0, 12), end: d(0, 16), note: 'Schools Open' },
+                { n: 1, start: d(0, 12), end: d(0, 16), note: 'Term 1 begins' },
                 { n: 2, start: d(0, 19), end: d(0, 23) },
                 { n: 3, start: d(0, 26), end: d(0, 30) },
                 { n: 4, start: d(1, 2), end: d(1, 6) },
                 { n: 5, start: d(1, 9), end: d(1, 13) },
                 { n: 6, start: d(1, 16), end: d(1, 20) },
                 { n: 7, start: d(1, 23), end: d(1, 27) },
-                { n: 8, start: d(2, 2), end: d(2, 6), note: 'Mid-Term Assessment window' },
-                { n: 9, start: d(2, 9), end: d(2, 13), note: "Includes Women's Day & Youth Day holidays" },
+                { n: 8, start: d(2, 2), end: d(2, 6) },
+                { n: 9, start: d(2, 9), end: d(2, 13) },
                 { n: 10, start: d(2, 16), end: d(2, 20) },
-                { n: 11, start: d(2, 23), end: d(2, 27), note: 'End of term examinations' },
-                { n: 12, start: d(2, 30), end: d(3, 2), note: 'Closing on Thursday before Good Friday' }
+                { n: 11, start: d(2, 23), end: d(2, 27) },
+                { n: 12, start: d(3, 2), end: d(3, 6), note: 'Term 1 closes' }
             ]
         },
         {
             id: 'term2', label: 'Term 2', cls: 'term2', color: 'var(--term2)',
-            opening: d(4, 4), closing: d(7, 7),
+            opening: d(4, 11), closing: d(6, 28),
             weeks: [
-                { n: 1, start: d(4, 4), end: d(4, 8), note: 'Schools Reopen' },
-                { n: 2, start: d(4, 11), end: d(4, 15) },
-                { n: 3, start: d(4, 18), end: d(4, 22) },
-                { n: 4, start: d(4, 25), end: d(4, 29), note: 'Includes Africa Freedom Day' },
-                { n: 5, start: d(5, 1), end: d(5, 5) },
-                { n: 6, start: d(5, 8), end: d(5, 12) },
-                { n: 7, start: d(5, 15), end: d(5, 19) },
-                { n: 8, start: d(5, 22), end: d(5, 26) },
-                { n: 9, start: d(5, 29), end: d(6, 3) },
-                { n: 10, start: d(6, 6), end: d(6, 10), note: "Includes Heroes' Day & Unity Day holidays" },
-                { n: 11, start: d(6, 13), end: d(6, 17) },
-                { n: 12, start: d(6, 20), end: d(6, 24) },
-                { n: 13, start: d(6, 27), end: d(6, 31), note: 'End of Term assessments' },
-                { n: 14, start: d(7, 3), end: d(7, 7), note: "Includes Farmers' Day holiday & Term 2 Closing" }
+                { n: 1, start: d(4, 11), end: d(4, 15), note: 'Term 2 begins' },
+                { n: 2, start: d(4, 18), end: d(4, 22) },
+                { n: 3, start: d(4, 25), end: d(4, 29) },
+                { n: 4, start: d(5, 1), end: d(5, 5) },
+                { n: 5, start: d(5, 8), end: d(5, 12) },
+                { n: 6, start: d(5, 15), end: d(5, 19) },
+                { n: 7, start: d(5, 22), end: d(5, 26) },
+                { n: 8, start: d(5, 29), end: d(6, 2) },
+                { n: 9, start: d(6, 5), end: d(6, 9) },
+                { n: 10, start: d(6, 12), end: d(6, 16) },
+                { n: 11, start: d(6, 19), end: d(6, 23) },
+                { n: 12, start: d(6, 26), end: d(6, 28), note: 'Term 2 closes' }
             ]
         },
         {
             id: 'term3', label: 'Term 3', cls: 'term3', color: 'var(--term3)',
-            opening: d(8, 14), closing: d(11, 11),
+            opening: d(8, 7), closing: d(11, 18),
             weeks: [
-                { n: 1, start: d(8, 14), end: d(8, 18), note: 'Schools Reopen' },
-                { n: 2, start: d(8, 21), end: d(8, 25) },
-                { n: 3, start: d(8, 28), end: d(9, 2) },
-                { n: 4, start: d(9, 5), end: d(9, 9), note: "Includes World Teachers' Day" },
-                { n: 5, start: d(9, 12), end: d(9, 16) },
-                { n: 6, start: d(9, 19), end: d(9, 23), note: 'Includes National Day of Prayer & Independence Day' },
-                { n: 7, start: d(9, 26), end: d(9, 30), note: 'Mock exams / Revision period' },
-                { n: 8, start: d(10, 2), end: d(10, 6) },
-                { n: 9, start: d(10, 9), end: d(10, 13) },
-                { n: 10, start: d(10, 16), end: d(10, 20), note: 'Grade 7 National Composite Exams begin' },
-                { n: 11, start: d(10, 23), end: d(10, 27), note: 'Grade 7 Exam final phase' },
-                { n: 12, start: d(10, 30), end: d(11, 4), note: 'General primary end-of-year exams' },
-                { n: 13, start: d(11, 7), end: d(11, 11), note: 'Report compilation & Final School Closing' }
+                { n: 1, start: d(8, 7), end: d(8, 11), note: 'Term 3 begins' },
+                { n: 2, start: d(8, 14), end: d(8, 18) },
+                { n: 3, start: d(8, 21), end: d(8, 25) },
+                { n: 4, start: d(8, 28), end: d(9, 1) },
+                { n: 5, start: d(9, 4), end: d(9, 8) },
+                { n: 6, start: d(9, 11), end: d(9, 15) },
+                { n: 7, start: d(9, 18), end: d(9, 22) },
+                { n: 8, start: d(9, 25), end: d(9, 29) },
+                { n: 9, start: d(10, 2), end: d(10, 6) },
+                { n: 10, start: d(10, 9), end: d(10, 13) },
+                { n: 11, start: d(10, 16), end: d(10, 20) },
+                { n: 12, start: d(10, 23), end: d(10, 27) },
+                { n: 13, start: d(10, 30), end: d(11, 4) },
+                { n: 14, start: d(11, 7), end: d(11, 11) },
+                { n: 15, start: d(11, 14), end: d(11, 18), note: 'Term 3 closes' }
             ]
         }
     ];
@@ -139,8 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 SCHOOL_DAY_MAP[iso(cur)] = { term, week };
                 cur = addDays(cur, 1);
             }
-            // The "badge date" is the first weekday of the week that isn't a public
-            // holiday, so the Week badge still shows even if the week opens on a holiday.
             let badgeCur = new Date(week.start);
             while (badgeCur <= week.end && HOLIDAY_MAP[iso(badgeCur)]) {
                 badgeCur = addDays(badgeCur, 1);
@@ -275,10 +272,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (entry.isIntersecting) {
                     const idx = monthEls.indexOf(entry.target);
                     navBtns.forEach(b => b.classList.remove('active'));
-                    if (navBtns[idx]) navBtns[idx].classList.add('active');
+                    if (idx >= 0) navBtns[idx].classList.add('active');
                 }
             });
-        }, { rootMargin: '-40% 0px -50% 0px' });
+        }, { root: null, rootMargin: '0px', threshold: 0.5 });
         monthEls.forEach(el => observer.observe(el));
     }
 });
