@@ -457,6 +457,15 @@ h3 { font-size: 1.35rem; }
   .admissions-steps { grid-template-columns: 1fr; }
   .about-features { grid-template-columns: 1fr; }
 }
+/* ---------- Events Filter & Calendar ---------- */
+.events-filter { text-align: center; }
+.filter-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.filter-btn { padding: 10px 20px; border-radius: 999px; background: transparent; color: var(--green-800); border: 2px solid var(--green-800); cursor: pointer; font-weight: 600; transition: all 0.25s ease; font-size: 0.92rem; }
+.filter-btn:hover { background: var(--green-800); color: #fff; }
+.filter-btn.active { background: var(--green-800); color: #fff; }
+.add-to-cal-btn { position: relative; display: flex; align-items: center; justify-content: center; }
+.add-to-cal-btn:hover { background: var(--green-800) !important; color: #fff !important; }
+.event-item { transition: opacity 0.3s ease, transform 0.3s ease; }
 
 @media (max-width: 640px) {
   .section-padding { padding: 64px 0; }
