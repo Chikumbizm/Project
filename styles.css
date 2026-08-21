@@ -310,15 +310,18 @@ h3 { font-size: 1.35rem; }
 
 /* ---------- Events ---------- */
 .events-list { display: flex; flex-direction: column; gap: 20px; }
-.event-item { display: flex; align-items: center; gap: 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 30px; transition: all 0.3s ease; }
+.event-item {
+  display: flex; align-items: center; gap: 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 30px; transition: all 0.3s ease; min-width: 0;
+}
 .event-item:hover { box-shadow: var(--shadow-md); border-color: transparent; }
 .event-date { text-align: center; background: var(--green-100); border-radius: var(--radius-sm); padding: 12px 18px; flex-shrink: 0; }
 .event-day { font-family: var(--ff-display); font-size: 1.7rem; font-weight: 700; color: var(--green-800); line-height: 1; }
 .event-month { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; color: var(--ink-500); }
-.event-details { flex: 1; }
-.event-category { color: var(--gold-600); font-size: 0.76rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
-.event-details h3 { margin: 6px 0 8px; }
-.event-details > p { color: var(--ink-500); font-size: 0.9rem; margin-bottom: 12px; }
+.event-details { flex: 1; min-width: 0; }
+.event-actions { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.event-actions .add-to-cal-btn { width: 44px; height: 44px; padding: 0; min-width: 44px; }
+.event-actions .add-to-cal-btn i { font-size: 0.95rem; }
+.event-details h3, .event-details p { word-break: break-word; }
 .event-meta { display: flex; gap: 22px; font-size: 0.82rem; color: var(--ink-700); flex-wrap: wrap; }
 .event-btn { flex-shrink: 0; }
 
@@ -472,8 +475,20 @@ h3 { font-size: 1.35rem; }
   .programs-grid, .faculty-grid, .news-grid, .stats-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .event-item { flex-direction: column; text-align: center; }
+  .event-item {
+    flex-direction: column; align-items: stretch; text-align: center; padding: 18px 16px; gap: 16px; width: 100%; max-width: 100%;
+  }
+  .event-date {
+    align-self: center; width: 90px; margin: 0 auto;
+  }
+  .event-details { width: 100%; }
   .event-meta { justify-content: center; }
+  .event-actions {
+    width: 100%; justify-content: center;
+  }
+  .event-actions .add-to-cal-btn {
+    width: 46px; height: 46px;
+  }
   .hero-content { text-align: center; margin: 0 auto; }
   .hero-buttons, .cta-buttons, .admissions-buttons { justify-content: center; }
   .page-header { padding: 150px 0 64px; }
