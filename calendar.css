@@ -1,0 +1,152 @@
+/* ==========================================================================
+   GREENWOOD ACADEMY — SCHOOL CALENDAR (2026)
+   Extends styles.css. Uses the shared palette + adds calendar-only tokens.
+   ========================================================================== */
+
+:root {
+  --term1: var(--green-700);
+  --term1-bg: var(--green-100);
+  --term2: var(--gold-500);
+  --term2-bg: #faf3e3;
+  --term3: var(--navy-800);
+  --term3-bg: #e9edf6;
+  --holiday: #b3382c;
+  --holiday-bg: #fbe9e7;
+  --pe: #0f7d8c;
+  --pe-bg: #e3f4f6;
+  --weekend-bg: var(--paper-50);
+  --break-bg: repeating-linear-gradient(135deg, #fff 0 8px, var(--paper-100) 8px 16px);
+}
+
+/* ---------- Intro / summary strip ---------- */
+.cal-intro { padding: 60px 0 10px; }
+.cal-intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 46px; }
+.term-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 26px 22px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+}
+.term-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px; }
+.term-card.t1::before { background: var(--term1); }
+.term-card.t2::before { background: var(--term2); }
+.term-card.t3::before { background: var(--term3); }
+.term-card h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.term-card .term-weeks { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-500); margin-bottom: 14px; display: block; }
+.term-card .term-dates { display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; color: var(--ink-700); }
+.term-card .term-dates strong { color: var(--green-900); }
+
+/* ---------- Legend ---------- */
+.cal-legend {
+  display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; justify-content: center;
+  padding: 18px 22px; background: var(--paper-50); border: 1px solid var(--line); border-radius: 999px;
+  margin: 0 auto 50px; max-width: fit-content;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--ink-700); font-weight: 500; }
+.legend-swatch { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+.legend-swatch.term1 { background: var(--term1); }
+.legend-swatch.term2 { background: var(--term2); }
+.legend-swatch.term3 { background: var(--term3); }
+.legend-swatch.holiday { background: var(--holiday); }
+.legend-swatch.weekend { background: var(--ink-500); opacity: 0.4; }
+.legend-swatch.break { background: var(--break-bg); border: 1px solid var(--line); }
+.legend-swatch.pe { background: var(--pe); }
+
+/* ---------- Month jump nav ---------- */
+.cal-jumpnav {
+  position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line); padding: 14px 0;
+}
+.cal-jumpnav-inner { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.cal-jumpnav button {
+  padding: 7px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff;
+  color: var(--ink-700); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;
+}
+.cal-jumpnav button:hover, .cal-jumpnav button.active { background: var(--green-800); border-color: var(--green-800); color: #fff; }
+
+/* ---------- Year calendar grid ---------- */
+.cal-year { padding: 50px 0 100px; }
+.cal-months { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+
+.cal-month { scroll-margin-top: 80px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+.cal-month-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid var(--line); }
+.cal-month-head h3 { font-size: 1.35rem; margin: 0; }
+.cal-month-head .cal-year-label { font-size: 0.8rem; color: var(--ink-500); font-weight: 600; letter-spacing: 0.05em; }
+
+.cal-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); background: var(--paper-50); border-bottom: 1px solid var(--line); }
+.cal-weekdays span { text-align: center; padding: 9px 4px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: var(--ink-500); text-transform: uppercase; }
+.cal-weekdays span.fri { color: var(--pe); }
+
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+.cal-day {
+  min-height: 84px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 8px; position: relative; background: #fff; transition: background 0.15s ease;
+}
+.cal-day:nth-child(7n) { border-right: none; }
+.cal-day.empty { background: var(--paper-50); }
+.cal-day.weekend:not(.empty) { background: var(--weekend-bg); }
+.cal-day.school-break:not(.empty) { background: var(--break-bg); }
+.cal-day.holiday { background: var(--holiday-bg); }
+
+.cal-day-num { font-family: var(--ff-display); font-weight: 700; font-size: 1rem; color: var(--green-900); line-height: 1; }
+.cal-day.weekend .cal-day-num { color: var(--ink-500); }
+.cal-day.holiday .cal-day-num { color: var(--holiday); }
+
+.cal-term-bar { position: absolute; top: 0; left: 0; bottom: 0; width: 4px; }
+.cal-day.term1 .cal-term-bar { background: var(--term1); }
+.cal-day.term2 .cal-term-bar { background: var(--term2); }
+.cal-day.term3 .cal-term-bar { background: var(--term3); }
+
+.cal-week-badge {
+  position: absolute; top: 6px; right: 6px; font-size: 0.6rem; font-weight: 700; color: #fff;
+  padding: 1px 5px; border-radius: 999px; line-height: 1.4; opacity: 0.9;
+}
+.cal-day.term1 .cal-week-badge { background: var(--term1); }
+.cal-day.term2 .cal-week-badge { background: var(--term2); }
+.cal-day.term3 .cal-week-badge { background: var(--term3); }
+
+.cal-holiday-label {
+  display: block; margin-top: 20px; font-size: 0.62rem; font-weight: 700; color: var(--holiday);
+  line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+
+.cal-pe-tag {
+  position: absolute; bottom: 6px; left: 8px; font-size: 0.58rem; font-weight: 800; letter-spacing: 0.04em;
+  color: var(--pe); background: var(--pe-bg); padding: 1px 6px; border-radius: 999px;
+}
+
+.cal-note-dot {
+  position: absolute; bottom: 7px; right: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-500);
+}
+
+/* ---------- Tooltip ---------- */
+.cal-day[data-tip] { cursor: help; }
+.cal-day[data-tip]:hover::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: 100%; transform: translateX(-50%);
+  background: var(--green-900); color: #fff; font-size: 0.72rem; font-weight: 500; padding: 8px 12px;
+  border-radius: 8px; white-space: normal; width: max-content; max-width: 220px; z-index: 30;
+  box-shadow: var(--shadow-md); margin-bottom: 8px; line-height: 1.4; pointer-events: none;
+}
+.cal-day[data-tip]:hover::before {
+  content: ""; position: absolute; left: 50%; bottom: 100%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: var(--green-900); margin-bottom: 2px; z-index: 30; pointer-events: none;
+}
+
+/* ---------- Holiday reference table ---------- */
+.cal-holidays { padding: 20px 0 100px; }
+.holidays-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.holidays-table th { text-align: left; background: var(--green-900); color: #fff; padding: 14px 20px; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.holidays-table td { padding: 14px 20px; border-top: 1px solid var(--line); font-size: 0.92rem; color: var(--ink-700); }
+.holidays-table tr:nth-child(even) td { background: var(--paper-50); }
+.holidays-table td.hol-date { font-weight: 700; color: var(--green-900); white-space: nowrap; }
+.holidays-table td.hol-day { color: var(--ink-500); font-size: 0.82rem; }
+
+@media (max-width: 980px) {
+  .cal-months { grid-template-columns: 1fr; }
+  .cal-intro-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .cal-day { min-height: 66px; padding: 5px; }
+  .cal-day-num { font-size: 0.82rem; }
+  .cal-holiday-label { font-size: 0.55rem; margin-top: 14px; }
+  .cal-weekdays span { font-size: 0.58rem; }
+  .cal-jumpnav button { padding: 6px 11px; font-size: 0.74rem; }
+}

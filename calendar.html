@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Calendar 2026 - Greenwood Academy</title>
+    <meta name="description" content="Greenwood Academy's full 2026 school calendar: term dates, weekly breakdown, Zambian public holidays, and Friday PE schedule.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar solid" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <h1>Greenwood</h1>
+                    <span>Academy</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+                    <li><a href="news.html" class="nav-link">News</a></li>
+                    <li><a href="events.html" class="nav-link active">Events</a></li>
+                    <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="admissions.html" class="btn btn-primary nav-btn">Apply Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image:url('images/classroom-rows-empty.jpg');"></div>
+        <div class="page-header-content">
+            <span class="section-tag light">2026 Academic Year</span>
+            <h1>School Calendar</h1>
+            <p>Term dates, weekly breakdown, Zambian public holidays, and our Friday Physical Education schedule — all in one place.</p>
+            <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> <a href="events.html">Events</a> <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i> <span>School Calendar</span></div>
+        </div>
+    </section>
+
+    <section class="cal-intro">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 36px;">
+                <span class="section-tag">Term Overview</span>
+                <h2>Three Terms, One Great Year</h2>
+                <p class="section-subtitle">Zambia's 2026 primary school calendar at a glance.</p>
+            </div>
+
+            <div class="cal-intro-grid" id="calTermCards"><!-- injected by calendar.js --></div>
+
+            <div class="cal-legend">
+                <span class="legend-item"><span class="legend-swatch term1"></span> Term 1</span>
+                <span class="legend-item"><span class="legend-swatch term2"></span> Term 2</span>
+                <span class="legend-item"><span class="legend-swatch term3"></span> Term 3</span>
+                <span class="legend-item"><span class="legend-swatch holiday"></span> Public Holiday</span>
+                <span class="legend-item"><span class="legend-swatch weekend"></span> Weekend</span>
+                <span class="legend-item"><span class="legend-swatch break"></span> School Break</span>
+                <span class="legend-item"><span class="legend-swatch pe"></span> PE Friday</span>
+            </div>
+        </div>
+    </section>
+
+    <nav class="cal-jumpnav">
+        <div class="container cal-jumpnav-inner" id="calJumpNav"><!-- injected by calendar.js --></div>
+    </nav>
+
+    <section class="cal-year">
+        <div class="container">
+            <div class="cal-months" id="calMonths"><!-- injected by calendar.js --></div>
+        </div>
+    </section>
+
+    <section class="cal-holidays bg-gray section-padding" style="padding-top: 60px;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 36px;">
+                <span class="section-tag">Quick Reference</span>
+                <h2>2026 Public Holidays</h2>
+                <p class="section-subtitle">School is closed on these dates.</p>
+            </div>
+            <table class="holidays-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Holiday</th></tr>
+                </thead>
+                <tbody id="calHolidayBody"><!-- injected by calendar.js --></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon light"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="logo-text light">
+                            <h1>Greenwood</h1>
+                            <span>Academy</span>
+                        </div>
+                    </div>
+                    <p>Nurturing curious minds and inspiring excellence since 1976. A trusted community where every student thrives.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to Our Newsletter</h4>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Academic Programs</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="faculty.html">Our Faculty</a></li>
+                        <li><a href="news.html">Latest News</a></li>
+                        <li><a href="events.html">Events Calendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Parent Portal [Login]</a></li>
+                        <li><a href="#">Student Portal [Login]</a></li>
+                        <li><a href="faculty.html">Faculty &amp; Staff Directory</a></li>
+                        <li><a href="calendar.html">School Calendar</a></li>
+                        <li><a href="#">Lunch Menu</a></li>
+                        <li><a href="#">Transportation Info</a></li>
+                        <li><a href="#">Handbook &amp; Policies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 1234 Greenwood Ave<br>Springfield, ST 12345</li>
+                        <li><i class="fas fa-phone-alt"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@greenwoodacademy.edu</li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2026 Greenwood Academy. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>
