@@ -290,8 +290,10 @@ body{margin:0;background:#fff}
  .nav .navcta:hover{background:#fff}
  .hero{padding:64px 0}
  .hero .wrap{gap:40px}
+ .hero:not(.sub) .wrap{grid-template-columns:1fr;gap:36px}
  .hero.sub{padding:60px 0}
  .heroArt{padding:0 16px 16px 0}
+ .heroArt img{aspect-ratio:16/10;object-position:center 56%}
  .heroArt .badge{left:0;bottom:18px}
  .sec{padding:72px 0}
  .svc,.vals,.proj,.foot .wrap,.story,.vm,.what,.ct,.sup,.proof{grid-template-columns:1fr}
